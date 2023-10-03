@@ -3,7 +3,7 @@ const modals = () => {
     triggerSelector,
     modalSelector,
     closeSelector,
-    closeClickOverlay = true
+    destroy = false
   ) {
     const trigger = document.querySelectorAll(triggerSelector),
       modal = document.querySelector(modalSelector),
@@ -15,6 +15,10 @@ const modals = () => {
       item.addEventListener("click", (e) => {
         if (e.target) {
           e.preventDefault();
+        }
+
+        if (destroy) {
+          item.remove();
         }
 
         windows.forEach((item) => {
@@ -38,7 +42,7 @@ const modals = () => {
     });
 
     modal.addEventListener("click", (e) => {
-      if (e.target === modal && closeClickOverlay) {
+      if (e.target === modal) {
         windows.forEach((item) => {
           item.style.display = "none";
         });
@@ -63,6 +67,8 @@ const modals = () => {
       if (!display) {
         document.querySelector(selector).style.display = "block";
         document.body.style.overflow = "hidden";
+        let scroll = calcScroll();
+        document.body.style.marginRight = `${scroll}px`;
       }
     }, time);
   }
@@ -87,6 +93,7 @@ const modals = () => {
     ".popup-consultation",
     ".popup-consultation .popup-close"
   );
+  bindModal(".fixed-gift", ".popup-gift", ".popup-gift .popup-close", true);
 
   showModalByTime(".popup-consultation", 5000);
 };
