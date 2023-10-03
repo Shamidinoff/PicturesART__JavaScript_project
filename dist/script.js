@@ -51,8 +51,16 @@ const modals = () => {
   }
   function showModalByTime(selector, time) {
     setTimeout(function () {
-      document.querySelector(selector).style.display = "block";
-      document.body.style.overflow = "hidden";
+      let display;
+      document.querySelectorAll("[data-modal]").forEach(item => {
+        if (getComputedStyle(item).display !== "none") {
+          display = "block";
+        }
+      });
+      if (!display) {
+        document.querySelector(selector).style.display = "block";
+        document.body.style.overflow = "hidden";
+      }
     }, time);
   }
   function calcScroll() {
@@ -67,6 +75,8 @@ const modals = () => {
     return scrollWidth;
   }
   bindModal(".button-design", ".popup-design", ".popup-design .popup-close");
+  bindModal(".button-consultation", ".popup-consultation", ".popup-consultation .popup-close");
+  showModalByTime(".popup-consultation", 5000);
 };
 /* harmony default export */ __webpack_exports__["default"] = (modals);
 
