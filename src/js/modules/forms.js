@@ -59,7 +59,7 @@ const forms = () => {
 
       const formData = new FormData(item);
       let api;
-      item.closest(".popup-design")
+      item.closest(".popup-design") || item.classList.contains("calc_form")
         ? (api = path.designer)
         : (api = path.question);
 
@@ -77,6 +77,9 @@ const forms = () => {
           clearInputs();
           setTimeout(() => {
             statusMessage.remove();
+            item.style.display = "block";
+            item.classList.remove("fadeOutUp");
+            item.classList.add("fadeInUp");
           }, 5000);
         });
     });
