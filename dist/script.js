@@ -29,6 +29,7 @@ const modals = () => {
         }
         windows.forEach(item => {
           item.style.display = "none";
+          item.classList.add("animated", "fadeIn");
         });
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
@@ -83,7 +84,8 @@ const modals = () => {
   }
   function openByScroll(selector) {
     window.addEventListener("scroll", () => {
-      if (!btnPressed && window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+      let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+      if (!btnPressed && window.pageYOffset + document.documentElement.clientHeight >= scrollHeight) {
         document.querySelector(selector).click();
       }
     });

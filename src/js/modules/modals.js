@@ -27,6 +27,7 @@ const modals = () => {
 
         windows.forEach((item) => {
           item.style.display = "none";
+          item.classList.add("animated", "fadeIn");
         });
 
         modal.style.display = "block";
@@ -93,10 +94,15 @@ const modals = () => {
 
   function openByScroll(selector) {
     window.addEventListener("scroll", () => {
+      let scrollHeight = Math.max(
+        document.documentElement.scrollHeight,
+        document.body.scrollHeight
+      );
+
       if (
         !btnPressed &&
         window.pageYOffset + document.documentElement.clientHeight >=
-          document.documentElement.scrollHeight
+          scrollHeight
       ) {
         document.querySelector(selector).click();
       }
