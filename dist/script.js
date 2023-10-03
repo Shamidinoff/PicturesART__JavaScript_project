@@ -13,7 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const forms = () => {
   const form = document.querySelectorAll("form"),
-    inputs = document.querySelectorAll("input");
+    inputs = document.querySelectorAll("input"),
+    upload = document.querySelectorAll('[name="upload"]');
 
   //   checkNumInputs('input[name="user_phone"]');
 
@@ -41,6 +42,15 @@ const forms = () => {
       item.value = "";
     });
   };
+  upload.forEach(item => {
+    item.addEventListener("input", () => {
+      let dots;
+      const arr = item.files[0].name.split(".");
+      arr[0].length > 6 ? dots = "..." : dots = ".";
+      const name = arr[0].substring(0, 6) + dots + arr[1];
+      item.previousElementSibling.textContent = name;
+    });
+  });
   form.forEach(item => {
     item.addEventListener("submit", e => {
       e.preventDefault();
