@@ -1,29 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700i&subset=cyrillic');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i&subset=cyrillic");
 @font-face {
-  font-family: 'Circe Light';
-  src: url('../fonts/Circe-Light.eot');
-  src: url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-Light.woff') format('woff'), url('../fonts/Circe-Light.ttf') format('truetype');
+  font-family: "Circe Light";
+  src: url("../fonts/Circe-Light.eot");
+  src: url("../fonts/Circe-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-Light.woff") format("woff"),
+    url("../fonts/Circe-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Circe Regular';
-  src: url('../fonts/Circe-Regular.eot');
-  src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-Regular.woff') format('woff'), url('../fonts/Circe-Regular.ttf') format('truetype');
+  font-family: "Circe Regular";
+  src: url("../fonts/Circe-Regular.eot");
+  src: url("../fonts/Circe-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-Regular.woff") format("woff"),
+    url("../fonts/Circe-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Circe Bold';
-  src: url('../fonts/Circe-Bold.eot');
-  src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-Bold.woff') format('woff'), url('../fonts/Circe-Bold.ttf') format('truetype');
+  font-family: "Circe Bold";
+  src: url("../fonts/Circe-Bold.eot");
+  src: url("../fonts/Circe-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-Bold.woff") format("woff"),
+    url("../fonts/Circe-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Circe Extra Bold';
-  src: url('../fonts/Circe-ExtraBold.eot');
-  src: url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-ExtraBold.woff') format('woff'), url('../fonts/Circe-ExtraBold.ttf') format('truetype');
+  font-family: "Circe Extra Bold";
+  src: url("../fonts/Circe-ExtraBold.eot");
+  src: url("../fonts/Circe-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Circe-ExtraBold.woff") format("woff"),
+    url("../fonts/Circe-ExtraBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -35,7 +43,7 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: 'Circe Regular', sans-serif;
+  font-family: "Circe Regular", sans-serif;
 }
 p {
   margin: 0;
@@ -57,7 +65,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
 }
 .p15 {
   font-size: 1.5;
@@ -69,7 +77,7 @@ h4 {
   border-radius: 50px;
   display: block;
   margin: 0 auto;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .button-transparent {
   background-color: transparent;
@@ -79,7 +87,7 @@ h4 {
   border: 2px solid #c51abb;
 }
 .button-transparent:before {
-  content: '';
+  content: "";
   background: url("../img/camera.svg") no-repeat center;
   width: 1.6rem;
   height: 1.6rem;
@@ -116,7 +124,7 @@ h4 {
   padding: 2rem 1.5rem;
   color: #ffffff;
   cursor: auto;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
   font-size: 1.5rem;
 }
 .header .burger img {
@@ -156,7 +164,7 @@ h4 {
   color: inherit;
 }
 .header-menu li a:after {
-  content: '';
+  content: "";
   background-image: url("../img/down-arrow.svg");
   margin-left: 0.7rem;
   width: 1.2rem;
@@ -209,7 +217,6 @@ h4 {
   background-color: #f7e7e6;
   padding-top: 3rem;
   /* Making it beautiful */
-
 }
 .main .file_upload {
   position: relative;
@@ -220,8 +227,7 @@ h4 {
   height: 4em;
   /* example */
 
-  line-height: 2em /* the same as height */
-;
+  line-height: 2em /* the same as height */;
 }
 .main .file_upload > button {
   float: right;
@@ -233,9 +239,8 @@ h4 {
 .main .file_upload > div {
   padding-left: 1em;
   /* example */
-
 }
-.main .file_upload input[type=file] {
+.main .file_upload input[type="file"] {
   position: absolute;
   left: 0;
   top: 0;
@@ -264,7 +269,7 @@ h4 {
   padding: 1.5rem;
 }
 .main .file_upload > button:before {
-  content: '';
+  content: "";
   background: url("../img/camera.svg") no-repeat center;
   width: 1.6rem;
   height: 1.6rem;
@@ -276,13 +281,13 @@ h4 {
 }
 .main .logo {
   font-size: 2.5rem;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
   color: #c51abb;
   text-transform: uppercase;
 }
 .main .logo-p {
   font-size: 1.5rem;
-  font-family: 'Circe Light', sans-serif;
+  font-family: "Circe Light", sans-serif;
   max-width: 20rem;
 }
 .main .email {
@@ -298,10 +303,10 @@ h4 {
   text-align: right;
   margin: 0;
   margin-top: 1.5rem;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .main .phone:before {
-  content: '';
+  content: "";
   background: url("../img/24-hours.svg") no-repeat center;
   width: 2.4rem;
   height: 2.4rem;
@@ -323,7 +328,7 @@ h4 {
   margin-right: 1rem;
 }
 .main .p-heading-italic {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
   text-align: center;
   margin-top: 9rem;
@@ -336,7 +341,7 @@ h4 {
   margin-left: 3rem;
   position: relative;
   font-size: 1.5rem;
-  font-family: 'Circe Light', sans-serif;
+  font-family: "Circe Light", sans-serif;
 }
 .main-features img {
   width: 2rem;
@@ -350,7 +355,7 @@ h4 {
   color: #c51abb;
   font-size: 1.5rem;
   margin: 7rem 0 3rem 0;
-  font-family: 'Circe Regular', sans-serif;
+  font-family: "Circe Regular", sans-serif;
 }
 .main .button-order {
   padding: 1.5rem 4rem;
@@ -491,7 +496,6 @@ h4 {
 .calc {
   padding: 8rem 0 4rem 0;
   /* Making it beautiful */
-
 }
 .calc h2,
 .calc .p-heading {
@@ -507,7 +511,7 @@ h4 {
 }
 .calc select {
   opacity: 0.6;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
   margin-left: 4rem;
   appearance: none;
   border: none;
@@ -517,7 +521,7 @@ h4 {
 }
 .calc .promocode {
   opacity: 0.6;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
   margin-left: 4rem;
   appearance: none;
   border: none;
@@ -555,8 +559,7 @@ h4 {
   height: 4em;
   /* example */
 
-  line-height: 2em /* the same as height */
-;
+  line-height: 2em /* the same as height */;
 }
 .calc .file_upload > button {
   float: right;
@@ -566,10 +569,9 @@ h4 {
   height: 100%;
 }
 .calc .file_upload > div {
-  padding-left: 1em /* example */
-;
+  padding-left: 1em /* example */;
 }
-.calc .file_upload input[type=file] {
+.calc .file_upload input[type="file"] {
   position: absolute;
   left: 0;
   top: 0;
@@ -598,7 +600,7 @@ h4 {
   padding: 1.5rem;
 }
 .calc .file_upload > button:before {
-  content: '';
+  content: "";
   background: url("../img/camera.svg") no-repeat center;
   width: 1.6rem;
   height: 1.6rem;
@@ -657,7 +659,7 @@ h4 {
   margin: 15rem 0;
 }
 .gift {
-  background: url('../img/gift-bg.jpg') no-repeat;
+  background: url("../img/gift-bg.jpg") no-repeat;
   background-size: cover;
   background-position-x: 60%;
 }
@@ -719,7 +721,7 @@ h4 {
 }
 .sizes {
   padding: 9rem 0 20rem 0;
-  background: url('../img/sizes-bg.jpg') no-repeat center;
+  background: url("../img/sizes-bg.jpg") no-repeat center;
   background-size: cover;
 }
 .sizes h2,
@@ -752,7 +754,7 @@ h4 {
   top: 3rem;
   font-size: 2.4rem;
   color: #86b7d2;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .sizes-block .starting-price {
   bottom: 7rem;
@@ -761,7 +763,7 @@ h4 {
 .sizes-block .final-price {
   bottom: 4rem;
   font-size: 1.8rem;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
   color: black;
 }
 .sizes-block .sizes-hit {
@@ -774,7 +776,7 @@ h4 {
   padding: 1.5rem 2rem;
   left: 6rem;
   bottom: -2.5rem;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .scheme {
   padding-top: 9rem;
@@ -850,7 +852,7 @@ h4 {
   z-index: 19;
 }
 .feedback-block .button-order:before {
-  content: '';
+  content: "";
   background-image: url("../img/heart.png");
   background-size: 100%;
   width: 2rem;
@@ -863,7 +865,7 @@ h4 {
 .feedback-heading {
   margin-top: 4rem;
   font-size: 3rem;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
   text-align: center;
   line-height: 1.1;
 }
@@ -875,7 +877,7 @@ h4 {
   text-align: center;
 }
 .feedback-signature span {
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
 }
 .feedback .slick-slide img {
   position: relative;
@@ -908,7 +910,7 @@ h4 {
   padding: 3rem 4rem;
 }
 .often-questions .accordion-block:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -966,7 +968,7 @@ h4 {
 }
 .consultation input::placeholder {
   color: black;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .consultation .input-text {
   display: block;
@@ -981,7 +983,7 @@ h4 {
 .footer th {
   padding: 0.5rem;
   padding-bottom: 2.5rem;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
   font-size: 1.6rem;
 }
 .footer td {
@@ -992,7 +994,7 @@ h4 {
 .footer p {
   text-align: right;
   color: #000;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .footer p a {
   color: inherit;
@@ -1000,7 +1002,7 @@ h4 {
 }
 .footer .phone {
   font-size: 2.6rem;
-  font-family: 'Circe Extra Bold', sans-serif;
+  font-family: "Circe Extra Bold", sans-serif;
 }
 .footer .phone-whatsapp {
   font-size: 1.8rem;
@@ -1046,7 +1048,7 @@ h4 {
 .popup-consultation .form textarea::placeholder {
   color: black;
   text-align: center;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .popup-consultation .button-order {
   width: 100%;
@@ -1137,7 +1139,6 @@ h4 {
   height: 100%;
   background-color: rgba(178, 80, 188, 0.8);
   /* Making it beautiful */
-
 }
 .popup-design input[name="name"] {
   margin-top: 2rem;
@@ -1151,8 +1152,7 @@ h4 {
   height: 4em;
   /* example */
 
-  line-height: 2em /* the same as height */
-;
+  line-height: 2em /* the same as height */;
 }
 .popup-design .file_upload > button {
   float: right;
@@ -1164,9 +1164,8 @@ h4 {
 .popup-design .file_upload > div {
   padding-left: 1em;
   /* example */
-
 }
-.popup-design .file_upload input[type=file] {
+.popup-design .file_upload input[type="file"] {
   position: absolute;
   left: 0;
   top: 0;
@@ -1195,7 +1194,7 @@ h4 {
   padding: 1.5rem;
 }
 .popup-design .file_upload > button:before {
-  content: '';
+  content: "";
   background: url("../img/camera.svg") no-repeat center;
   width: 1.6rem;
   height: 1.6rem;
@@ -1225,7 +1224,7 @@ h4 {
 .popup-design .form textarea::placeholder {
   color: black;
   text-align: center;
-  font-family: 'Circe Bold', sans-serif;
+  font-family: "Circe Bold", sans-serif;
 }
 .popup-design .button-order {
   width: 100%;
@@ -1258,6 +1257,11 @@ h4 {
   transform: translateX(-50%) !important;
   padding: 3rem 6rem 4rem 6rem;
 }
+
+.status {
+  text-align: center;
+}
+
 @media (max-width: 1399px) {
   .paints {
     display: none;
@@ -1443,7 +1447,7 @@ h4 {
     bottom: -2.9rem;
   }
   .card-3 .card-block .p-heading {
-    margin: 2.5rem 0  3.5rem 0;
+    margin: 2.5rem 0 3.5rem 0;
   }
   .card-3 .card-block-text {
     padding-top: 0;
