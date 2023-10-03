@@ -111,6 +111,7 @@ const modals = () => {
 __webpack_require__.r(__webpack_exports__);
 const sliders = (slides, dir, prev, next) => {
   let slideIndex = 1;
+  let paused = false;
   const items = document.querySelectorAll(slides);
   function showSlides(n) {
     if (n > items.length) {
@@ -143,6 +144,27 @@ const sliders = (slides, dir, prev, next) => {
       items[slideIndex - 1].classList.add("slideInLeft");
     });
   } catch (e) {}
+  function activateAnimation() {
+    if (dir === "vertical") {
+      paused = setInterval(function () {
+        plusSlides(1);
+        items[slideIndex - 1].classList.add("slideInDown");
+      }, 3000);
+    } else {
+      paused = setInterval(function () {
+        plusSlides(1);
+        items[slideIndex - 1].classList.remove("slideInRight");
+        items[slideIndex - 1].classList.add("slideInLeft");
+      }, 3000);
+    }
+  }
+  activateAnimation();
+  items[0].parentNode.addEventListener("mouseenter", () => {
+    clearInterval(paused);
+  });
+  items[0].parentNode.addEventListener("mouseleave", () => {
+    activateAnimation();
+  });
 };
 /* harmony default export */ __webpack_exports__["default"] = (sliders);
 
@@ -202,7 +224,8 @@ window.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
   (0,_modules_modals__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_1__["default"])(".feedback-slider-item", "", ".main-prev-btn", ".main-next-btn");
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_1__["default"])(".feedback-slider-item", "horizontal", ".main-prev-btn", ".main-next-btn");
+  (0,_modules_sliders__WEBPACK_IMPORTED_MODULE_1__["default"])(".main-slider-item", "vertical");
 });
 }();
 /******/ })()
