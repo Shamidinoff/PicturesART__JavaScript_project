@@ -17,7 +17,6 @@ const showMoreStyles = (trigger, wrapper) => {
   //         "col-xs-offset-1"
   //       );
   //     });
-  //     // btn.style.display = "none";
   //     btn.remove();
   //   });
 
