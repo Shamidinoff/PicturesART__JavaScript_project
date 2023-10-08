@@ -9,35 +9,38 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-const accordion = (triggersSelector, itemsSelector) => {
+const accordion = triggersSelector => {
   const btns = document.querySelectorAll(triggersSelector);
-
-  //   btns.forEach((btn) => {
-  //     btn.addEventListener("click", function () {
-  //       this.classList.toggle("active-style");
-  //       this.nextElementSibling.classList.toggle("active-content");
-
-  //       if (this.classList.contains("active-style")) {
-  //       } else {
-  //       }
-  //     });
-  //   });
-
-  const blocks = document.querySelectorAll(itemsSelector);
-  blocks.forEach(block => {
-    block.classList.add("animated", "fadeInDown");
-  });
-  btns.addEventListener(btn => {
-    btn.addEventListener("clock", function () {
-      if (!this.classList.contains("active")) {
-        btns.forEach(btn => {
-          btn.classList.remove("active", "active-style");
-        });
-        this.classList.add("active", "active-style");
+  btns.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active-style");
+      this.nextElementSibling.classList.toggle("active-content");
+      if (this.classList.contains("active-style")) {
+        this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 80 + "px";
+      } else {
+        this.nextElementSibling.style.maxHeight = "0px";
       }
     });
   });
+
+  // const blocks = document.querySelectorAll(itemsSelector);
+
+  //   blocks.forEach((block) => {
+  //     block.classList.add("animated", "fadeInDown");
+  //   });
+
+  //   btns.addEventListener((btn) => {
+  //     btn.addEventListener("clock", function () {
+  //       if (!this.classList.contains("active")) {
+  //         btns.forEach((btn) => {
+  //           btn.classList.remove("active", "active-style");
+  //         });
+  //         this.classList.add("active", "active-style");
+  //       }
+  //     });
+  //   });
 };
+
 /* harmony default export */ __webpack_exports__["default"] = (accordion);
 
 /***/ }),
@@ -699,7 +702,7 @@ window.addEventListener("DOMContentLoaded", () => {
   (0,_modules_calc__WEBPACK_IMPORTED_MODULE_6__["default"])("#size", "#material", "#options", ".promocode", ".calc-price");
   (0,_modules_filter__WEBPACK_IMPORTED_MODULE_7__["default"])();
   (0,_modules_pictureSize__WEBPACK_IMPORTED_MODULE_8__["default"])(".sizes-block");
-  (0,_modules_accordion__WEBPACK_IMPORTED_MODULE_9__["default"])(".accordion-heading", ".accordion-block");
+  (0,_modules_accordion__WEBPACK_IMPORTED_MODULE_9__["default"])(".accordion-heading");
 });
 }();
 /******/ })()

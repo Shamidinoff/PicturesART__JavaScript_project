@@ -926,6 +926,14 @@ h4 {
   /* margin-top: 1rem; */
   /* padding: 3rem 4rem; */
 }
+
+.often-questions .accordion-block.active-content {
+  overflow: visible;
+  opacity: 1;
+  margin-top: 1rem;
+  padding: 3rem 4rem;
+}
+
 .often-questions .accordion-block:before {
   content: "";
   position: absolute;
