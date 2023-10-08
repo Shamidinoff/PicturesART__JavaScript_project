@@ -905,7 +905,7 @@ h4 {
   border-bottom: 2px dotted #333;
 }
 
-.often-questions .p.active-style span {
+.often-questions p.active-style span {
   color: #e950d7;
   font-weight: 900;
   text-decoration: none;
